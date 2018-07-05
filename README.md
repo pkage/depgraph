@@ -4,10 +4,6 @@
 
 Create a dependency graph of your project, highlighting circular dependencies and cross dependencies. Built with [esprima](https://esprima.org/) and [d3.js](https://d3js.org/).
 
-## Screenshots
-
-![Depgraph screenshot](./screenshots/one.png)
-
 ## Getting started
 
 ```
