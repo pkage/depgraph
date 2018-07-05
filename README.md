@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Create a dependency graph of your project, highlighting circular dependencies and cross dependencies.
+Create a dependency graph of your project, highlighting circular dependencies and cross dependencies. Built with [esprima](https://esprima.org/) and [d3.js](https://d3js.org/).
 
 ## Screenshots
 
@@ -43,3 +43,4 @@ $ depgraph -t goat/index.js -o - 2> /dev/null
 ```
 
 For the visualisation, copy (or symlink) the output file to the root of the `viz/` folder, and name it `depgraph.json`. Then simply serve it behind an HTTP server. I like [this one](https://www.npmjs.com/package/http-server).
+
