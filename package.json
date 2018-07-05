@@ -1,0 +1,29 @@
+{
+  "name": "depgraph",
+  "version": "0.0.1",
+  "description": "build a dependency tree",
+  "main": "depgraph.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quadnix/depgraph.git"
+  },
+  "author": "Patrick Kage",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quadnix/depgraph/issues"
+  },
+  "homepage": "https://github.com/quadnix/depgraph#readme",
+  "bin": {
+    "depgraph": "./cli.js"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "commander": "^2.16.0",
+    "esprima": "^4.0.0",
+    "graceful-fs": "^4.1.11",
+    "is-valid-path": "^0.1.1"
+  }
+}

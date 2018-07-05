@@ -1,0 +1,7 @@
+node_modules/
+goat/
+goat.js
+.DS_Store
+output*
+viz/depgraph.json
+test.js
