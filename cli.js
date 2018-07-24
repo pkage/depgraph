@@ -36,7 +36,7 @@ yargs
         },
         (argv) => {
             const desc = track.showFunctions(path.resolve(process.cwd(), argv.file))
-            output(desc, argv.output)
+            output(JSON.stringify(desc), argv.output)
             
         })
     .command('track <file> <root>',
@@ -64,15 +64,3 @@ yargs
     .demandCommand()
     .recommendCommands()
     .argv
-
-    /*
-if (prog.output === undefined) prog.output = '-'
-
-const out = dg(path.resolve(process.cwd(), prog.target))
-
-if (prog.output !== '-') {
-    fs.writeFileSync(prog.output, JSON.stringify(out))
-} else {
-    console.log(JSON.stringify(out))
-}
-*/

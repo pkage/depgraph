@@ -129,17 +129,21 @@ const extractDefinedMethods = (node) => {
 /**
  * Pretty print a list of classes / definitions
  * @param filename file to load from
+ * @returns a dict of classes with an array of methods
  */
 const showFunctions = (filename) => {
     const tree = parseModule(filename)
     const classes = extractDefinedClasses(tree)
-    let out = ''
+    const out = {}
     
     for (let c of classes) {
-        out += `${c.id.name}\n`
+        out[c.id.name] = []
         let methods = extractDefinedMethods(c)
         for (let m of methods) {
-            out += `\t${m.key.name}(${m.value.params.length})\n`
+            out[c.id.name].push({
+                name: m.key.name,
+                params: m.value.params.map(p => p.name)
+            })
         }
     }
 

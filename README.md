@@ -33,16 +33,27 @@ The core depgraph CLI spits out JSON, which you can then use to power your own v
 
 ## File description
 
-Simply spits out a text representation of a class:
+Simply spits out a JSON representation of all methods in all classes in a file:
 
 ```
 $ depgraph describe Model/model.js
-Model
-        constructor(0)
-        hasData(0)
-        setActiveModel(1)
-        getActiveModel(0)
+{
+    "Model": [
+        {
+            "name": "constructor",
+            "params": []
+        },
+        {
+            "name": "parseFile",
+            "params": [
+                "name",
+                ...
+            ]
+        }
         ...
+    ],
+    ...
+}
 ```
 
 ## File usage tracking
