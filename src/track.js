@@ -197,13 +197,18 @@ const searchForFunctionCalls = (node, fns) => {
  * @param node target file with definitions
  * @returns an object with the files/number of calls in each row
  */
-const trackFileUsage = (rootfile, nodefile) => {
+const trackFileUsage = (rootfile, nodefile, internal) => {
     // load the module
     const root = depgraph(rootfile)
     const node = parseModule(nodefile)
 
     // get a list of nodes to search
     const searchNodes = extractDependents(root, nodefile)
+
+    // patch in the node file into the search nodes
+    if (internal=='true') { // hacks
+        searchNodes.push(depgraph(nodefile))
+    }
     
     // get module class definitions
     const classes = extractDefinedClasses(node)

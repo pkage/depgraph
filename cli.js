@@ -48,11 +48,16 @@ yargs
             desc.positional('root', {
                 describe: 'project root'
             })
+            desc.option('internal', {
+                default: false,
+                describe: 'search for internal uses as well'
+            })
         },
         (argv) => {
             const usage = track.trackFileUsage(
                 path.resolve(process.cwd(), argv.root),
-                path.resolve(process.cwd(), argv.file)
+                path.resolve(process.cwd(), argv.file),
+                argv.internal
             )
             output(JSON.stringify(usage), argv.output)
         })
