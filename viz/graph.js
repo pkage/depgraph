@@ -149,6 +149,6 @@ const display = treeData => {
 
 }
 
-fetch('/depgraph.json', {cache: 'no-store'})
+fetch('./depgraph.json', {cache: 'no-store'})
     .then(r => r.json())
     .then(display)
