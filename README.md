@@ -79,8 +79,9 @@ $ depgraph track Controller/controller.js index.js
         ...
     }
 }
-
 ```
+
+You can search inside of the target file by passing `--internal=true`.
 
 ## Dependency graphing
 
