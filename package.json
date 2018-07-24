@@ -1,6 +1,6 @@
 {
   "name": "depgraph",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "build a dependency tree",
   "main": "depgraph.js",
   "scripts": {
@@ -21,9 +21,9 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "commander": "^2.16.0",
     "esprima": "^4.0.0",
     "graceful-fs": "^4.1.11",
-    "is-valid-path": "^0.1.1"
+    "is-valid-path": "^0.1.1",
+    "yargs": "^12.0.1"
   }
 }
