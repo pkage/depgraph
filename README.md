@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Depgraph is a analysis toolkit for your codebase, intended to aid refactoring. It can create a dependency graph of your project, highlighting circular dependencies and cross dependencies as well as showing the usage of specific files in a project. Built with [esprima](https://esprima.org/) and [d3.js](https://d3js.org/).
+Depgraph is an analysis toolkit for your codebase, intended to aid refactoring. It can create a dependency graph of your project, highlighting circular dependencies and cross dependencies as well as showing the usage of specific files in a project. Built with [esprima](https://esprima.org/) and [d3.js](https://d3js.org/).
 
 ## Getting started
 
